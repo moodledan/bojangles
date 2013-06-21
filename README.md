@@ -21,7 +21,7 @@ grunt
 grunt compressimages
 ```
 <hr>
-That should install all the Grunt dependencies, generate the build directory and compress the sample images. [ImageOptim.app] [2] will need to be installed for image optimisation. Check out the <b>index.html</b> file in <b>/src</b> and then have a dig around in <b>/build</b>.
+That should install all the Grunt dependencies, generate the build directory and compress the sample images. [ImageOptim.app] [2] will need to be installed for image optimisation. Fire up <b>src/index.html</b> in your browser to see more details and explanations and then have a dig around in <b>/build</b>.
 <hr>
 Todo
 -----------
