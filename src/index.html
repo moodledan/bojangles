@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!--(if target dev)><!-->
+        <title>SRC - Grunt.js test project</title>
+        <!--<!(endif)-->
+        <!--(if target build)>
+        <title>Grunt.js test project</title>
+        <!(endif)-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="ico/favicon.ico">
+
+        <!--(if target dev)><!-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/utils.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/site.css">
+        <link rel="stylesheet" href="css/mq.css">
+        <link rel="stylesheet" href="css/print.css">
+        <!--<!(endif)-->
+        <!--(if target build)>
+        <link rel="stylesheet" href="css/app.min.css?{{rlsdate}}">
+        <!(endif)-->
+
+        <!--(if target dev)><!-->
+        <script src="js/libs/modernizr-2.6.2.js"></script>
+        <!--<!(endif)-->
+        <!--(if target build)>
+        <script src="js/libs/modernizr-2.6.2.min.js?{{rlsdate}}"></script>
+        <!(endif)-->
+    </head>
+    <body>
+
+        <div class="container">
+            <header class="site-header cf" role="banner">
+                <div class="site-logo">
+                    Bo <span class="star">&#x2605;</span> jangles
+                </div>
+                <ul class="site-nav inline-block-list">
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 3</a>
+                    </li>
+                </ul>
+            </header><!-- end site-header -->
+
+            <div class="site-promo">
+                <h1><a href="">Grunt.js</a> test project.</h1>
+                <p class="description">Using Grunt.js for build automation <strong>concatenation</strong>, <strong>minification</strong>, and <strong>optimisation</strong>. There will also be <strong>watch tasks</strong>, <strong>linting</strong> and <strong>live-reload</strong>.</p>
+                
+                <!--(if target dev)><!-->
+                <div class="cta-option">
+                    <a class="btn-download"
+                       href="../build/index.html">
+                        <strong>View Build</strong>
+                    </a>
+                </div>
+                <!--<!(endif)-->
+            </div><!-- end site-promo -->
+
+            <p>Site design &amp; layout from the <a href="http://html5boilerplate.com/">HTML5 <span class="star">★</span> BOILERPLATE</a></p>
+        </div>
+
+        <div class="site-content">
+            <div class="container">
+                <h2>Automate repetitive tasks.</h2>
+
+                <div class="grid">
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Setup</h3>
+                        <p>Grunt and grunt plugins are installed and managed via <a href="https://npmjs.org/">npm</a>, the <a href="http://nodejs.org/">Node.js</a> package manager.</p>
+                        <p class="minimalbottommargin">Get those beauties installed, then from within the <code>bojangles</code> directory run: 
+                        <pre>npm install -g grunt-cli</pre>
+                        <pre>npm install</pre>
+                        <pre>grunt</pre>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Winning</h3>
+                        <p>The <code>src</code> directory is the raw (fully functional) source for the project, you should be able to open <code>index.html</code> inside this dirctory in your browser - Successfully if your reading this : )</p>
+                        <p>After running <code>Grunt</code> you'll find a new build directory, which is the processed output of <code>src</code> as well as a <code>node_modules</code> directory containing lots of <code>Grunt</code> goodness.
+                    </div>
+                </div>
+
+                <h2>Now what ...</h2>
+                <p>You run <code>grunt</code> and the <code>Gruntfile.js</code> automates a raft of, what would usually be, manual processes. The processes built into the <code>Gruntfile.js</code> are outlined below in the order they occur: </p>
+
+                <div class="grid">
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Clean</h3>
+                        <p>Everytime we run <code>grunt</code> we destroy the <code>build</code> directory and re-create it. Clean is responsible for this.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Targethtml</h3>
+                        <p><code>Index.html</code> in the <code>src</code> directory contains some HTML which is relevant to building your app, such as links to un-minfied CSS and JS as well as commented links to concatenated and minified CSS and JS - Which you would use in your build. Using <code>targethtml</code> we can switch which code is referenced and for which type of build. <code>targethtml</code> also adds version no. query string to our CSS and JS to prevent caching when an update is released.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Copy</h3>
+                        <p>The name says it all, copies <code>src</code> files into the <code>build</code> directory. Once specific example is copying JS libraries such as jQuery and Modenizer, which comes with minified source, to the build directory.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Imageoptim</h3>
+                        <p>Image optimisation, in this case we first let <code>copy</code> do its job and then optimise the images in the <code>build</code> directory. Personal preference, leaving the original images un-touched. You'll need to have <a href="http://imageoptim.com/">ImageOptim</a> installed for this to work correctly.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Concat</h3>
+                        <p>Grab all our JS and concatenate the source into <code>app.js</code>, remember <code>targethtml</code> handles the switching of filenames and paths in <code>index.html</code> to reflect the new concatenated JS file <code>app.js</code></p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Uglify</h3>
+                        <p>Minification of the concatenated JS as well as making it 'ugly'. Note this will probably need updating as more JS is added, see the file declaration for <code>cssmin</code> to see how to specify files in order if the load order of your JS is important.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Cssmin</h3>
+                        <p><code>cssmin</code> minifies the CSS as well as combining it into a single file. Note that we specify each seperate CSS file in its correct order as is necessary with CSS. As with <code>uglify</code> <code>targethtml</code> handles the file name and path changes for CSS as well as JS.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Jshint</h3>
+                        <p>Lint our JS, only JS in the top level of the <code>src/js</code> directory as were concered with the JS we've written. We lint the un-minified JS from the <code>src</code> directory rather than the minified source. The <code>libs</code> directory contains jQuery and Modernizer lets assume they pass, if they don't what hope do the rest of us have... </p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Csslint</h3>
+                        <p>Lint our CSS, we lint the un-minified css from the <code>src</code> directory rather than the minified source.</p>
+                    </div>
+                    <div class="grid-cell">
+                        <h3><span class="star">&#x2605;</span> Build actions</h3>
+                        <p>We have a <code>default</code> action defined, which can be run like so: <code><u>grunt</u></code> from the Terminal. This runs the following, <code>clean, targethtml, copy, concat, uglify, cssmin</code>. <br/ > <br/ > We have an action to lint CSS and JS like so: <code><u>grunt lint</u></code> this lints the <code>src</code> not the build output.<br /> <br/ > Lastly to optimise images we have <code><u>grunt compressimages</u></code> which will copy the <code>img</code> directory from <code>src</code> directory to the <code>build</code> directory and the compress images.
+                        </p>
+                    </div>
+                </div>
+                
+                <h2>Image samples</h2>
+                <div class="grid">
+                    <div class="grid-cell-third">
+                        <h3>.PNG Optimised</h3>
+                        <!-- Sub-directory to prove we optimise within the img directory -->
+                        <img src="img/promo/sample.png" width="90%" />
+                    </div>
+                    <div class="grid-cell-third">
+                        <h3>.GIF Optimised</h3>
+                        <img src="img/sample.gif" width="90%" />
+                    </div>
+                    <div class="grid-cell-third">
+                        <h3>.JPG Optimised</h3>
+                        <img src="img/sample.jpg" width="90%" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <aside class="aside">
+            <div class="container">
+
+            </div>
+        </aside><!-- end aside -->
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="container">
+
+            </div>
+        </footer><!-- end site-footer -->
+
+        <!--(if target dev)><!-->
+        <script src="js/libs/jquery-1.9.1.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!--<!(endif)-->
+        <!--(if target build)>
+        <script src="js/libs/jquery-1.9.1.min.js"></script>
+        <script src="js/app.min.js?{{rlsdate}}"></script>
+        <!(endif)-->
+    </body>
+</html>

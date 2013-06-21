@@ -1,0 +1,23 @@
+{
+  "name": "bojangles",
+  "version": "0.0.1",
+  "title": "Grunt.js test project",
+  "description": "Using Grunt.js for build automation concatenation, minification, and optimisation. There will also be watch tasks, linting and live-reload.",
+  "author": {
+    "name": "Dan Humpherson",
+    "email": "dhumpherson@gmail.com",
+    "url": "http://dan.ms"
+  },
+  "homepage": "http://dan.ms",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-imageoptim": "~1.2.6",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-csslint": "~0.1.2"
+  }
+}
