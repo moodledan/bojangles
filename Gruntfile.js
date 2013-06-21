@@ -39,8 +39,10 @@ module.exports = function(grunt) {
           rlsdate: '<%= grunt.template.process("v" + pkg.version) %>'
         }
       },
-      files: {
-        '<%= build_path %>/index.html': '<%= src_path %>/index.html'
+      build: {
+        files: {
+          '<%= build_path %>/index.html': '<%= src_path %>/index.html'
+        }
       }
     },
     // Copy files to the build directory
